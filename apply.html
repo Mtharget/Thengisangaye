@@ -15,7 +15,7 @@
     <!-- FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 
-    <style>
+      <style>
         /* Modern Polished School Website Styles */
 
         /* General Body */
@@ -25,19 +25,6 @@
             color: #212529;
             min-height: 100vh;
             overflow-x: hidden;
-
-        }
-
-        /* Modern Polished School Website Styles */
-
-        /* General Body */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f9fafb 0%, #e3e9f7 100%);
-            color: #212529;
-            min-height: 100vh;
-            overflow-x: hidden;
-
         }
 
 /* Toggler Button: Floating Circle with Animated Bars */
@@ -56,8 +43,6 @@
     justify-content: center;
     position: relative;
     z-index: 1051;
-    overflow-x: hidden;
-
 }
 .navbar-toggler:focus,
 .navbar-toggler:hover {
@@ -81,7 +66,7 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background: #007bff;
+    background: #047331;
     border-radius: 2px;
     transition: all 0.35s cubic-bezier(.68,-0.55,.27,1.55);
 }
@@ -152,7 +137,7 @@
     .navbar-nav .nav-link.active,
     .navbar-nav .nav-link:hover {
         background: #e3e9f7;
-        color: #007bff !important;
+        color: #047331 !important;
     }
 }
 @keyframes slideInNav {
@@ -176,7 +161,7 @@
             font-weight: 800;
             font-size: 2rem;
             letter-spacing: 1px;
-            color: #007bff !important;
+            color: #047331 !important;
         }
 
         .navbar-nav .nav-link {
@@ -187,7 +172,7 @@
 
         .navbar-nav .nav-link:hover,
         .navbar-nav .nav-link.active {
-            color: #0056b3 !important;
+            color: #047331 !important;
             background: #e3e9f7;
             border-radius: 8px;
         }
@@ -201,22 +186,17 @@
 
         .navbar-nav .btn-primary:hover {
             border-radius: 50px;
-            box-shadow: 0 4px 16px rgba(0, 86, 179, 0.18);
+            /* box-shadow: 0 4px 16px rgba(0, 86, 179, 0.18); */
         }
-        .btn-primary {
-  background: linear-gradient(135deg, #007bff, #0056b3);
-  border: none;
-}
-
 
         .hero-image-section {
-            background: linear-gradient(120deg, #007bff 0%, #6bc1ff 100%);
+            background: linear-gradient(120deg, #047331 0%, #6bc1ff 100%);
             position: relative;
-            min-height: 105vh;
+            min-height: 100vh;
             height: 105vh;
             width: 98.5vw;
             margin-bottom: 2.5rem;
-            border-radius: 0 0 24px 24px;
+            /* border-radius: 0 0 24px 24px; */
             box-shadow: 0 8px 32px rgba(0, 123, 255, 0.10);
             overflow: hidden;
             display: flex;
@@ -245,7 +225,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(120deg, #007bff88 0%, #6bc1ff66 100%);
+            background: linear-gradient(55deg, #047331 5%, rgba(107, 193, 255, 0.4) 50%, #ffffff 100%);
             z-index: 2;
         }
 
@@ -320,14 +300,7 @@
     100% { transform: scale(1.07);}
 }
 
-        /* Hero Section */
-        .section-title {
-            font-weight: 800;
-            font-size: 2.7rem;
-            color: #007bff;
-            letter-spacing: 1px;
-            margin-bottom: 0.8rem;
-        }
+    
 
         .lead {
             font-size: 1.25rem;
@@ -395,27 +368,31 @@
             border-radius: 24px 24px 0 0;
             box-shadow: 0 -2px 16px rgba(0, 123, 255, 0.06);
             animation: fadeInFooter 1.2s;
+            color: #047331;
         }
 
         .footer-section h5,
         .footer-section h6 {
             letter-spacing: 1px;
+            color: #047331;
         }
 
         .footer-section ul li a:hover {
-            color: #007bff !important;
+            color: #047331 !important;
             text-decoration: underline;
             transition: color 0.2s;
+            color:#047331;
         }
 
         .footer-section .fa-brands,
         .footer-section .fa-solid {
             transition: transform 0.2s, color 0.2s;
+            color: #047331;
         }
 
         .footer-section .fa-brands:hover,
         .footer-section .fa-solid:hover {
-            color: #0056b3 !important;
+            color: #047331 !important;
             transform: scale(1.2) rotate(-8deg);
         }
 
@@ -512,8 +489,6 @@
             }
         }
 
-        /* ...existing code... */
-
 
 
 
@@ -567,7 +542,7 @@
 }
 
 #uploadForm input[type="file"]:focus {
-  border-color: #0d6efd;
+  border-color: #047331;
   outline: none;
   box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
 }
@@ -606,6 +581,36 @@
   }
 }
 
+
+
+.btn-primary {
+            background-color: #047331;
+  border: none;
+}
+
+.text-green {
+    color: #047331 !important;
+}
+.btn-green {
+    background-color: #047331;
+    color: #fff;
+    border: none;
+}
+
+.btn-green:hover {
+    background-color: #035a28;
+}
+
+/* Custom green checkbox */
+.form-check-input:checked {
+    background-color: #047331;
+    border-color: #047331;
+}
+
+.form-check-input {
+    border: 2px solid #047331;
+    cursor: pointer;
+}
 
 
 
@@ -660,27 +665,27 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="p-5 bg-light rounded-4 shadow apply-now-section">
-                        <h2 class="fw-bold mb-4 text-primary text-center">
-                            <i class="fa-solid fa-user-graduate me-2"></i>Admissions 2026 Are Open!
+                        <h2 class="fw-bold mb-4 text-green text-center">
+                            <i class="fa-solid fa-user-graduate me-2 text-green"></i>Admissions 2026 Are Open!
                         </h2>
     
-                        <!-- Requirements Summary (Keep this part as-is) -->
+                        <p class="text-muted text-center mb-3">
+                            Before proceeding, please review our application guidelines and ensure all documents are ready
+                            for upload.
+                            By accepting the Terms & Conditions below, you agree to provide accurate and complete
+                            information for admission
+                            consideration.
+                        </p>
     
-                    <!-- Brief Instruction Paragraph -->
-                    <p class="text-muted text-center mb-3">
-                        Before proceeding, please review our application guidelines and ensure all documents are ready for upload.
-                        By accepting the Terms & Conditions below, you agree to provide accurate and complete information for admission
-                        consideration.
-                    </p>
-                    
-                    <!-- Terms & Conditions Checkbox -->
-                    <div class="form-check text-center mb-4">
-                        <input class="form-check-input" type="checkbox" id="acceptTerms" onchange="toggleUploadForm()" />
-                        <label class="form-check-label fw-semibold" for="acceptTerms">
-                            I accept the <a href="#" class="text-primary text-decoration-underline">Terms & Conditions</a>.
-                        </label>
-                    </div>
-  
+                        <!-- Terms & Conditions Checkbox -->
+                        <div class="form-check text-center mb-4">
+                            <input class="form-check-input" type="checkbox" id="acceptTerms"
+                                onchange="toggleUploadForm()" />
+                            <label class="form-check-label fw-semibold" for="acceptTerms">
+                                I accept the <a href="#" class="text-green text-decoration-underline">Terms &
+                                    Conditions</a>.
+                            </label>
+                        </div>
     
                         <!-- Hidden Upload Form -->
                         <div id="uploadForm" style="display: none;" data-aos="fade-up" data-aos-delay="200">
@@ -688,7 +693,7 @@
                                 <!-- Upload: Birth Certificate -->
                                 <div class="col-md-6">
                                     <label class="form-label fw-semibold"><i
-                                            class="fa-solid fa-id-card me-2 text-primary"></i>Birth Certificate</label>
+                                            class="fa-solid fa-id-card me-2 text-green"></i>Birth Certificate</label>
                                     <input type="file" class="form-control" required />
                                 </div>
     
@@ -702,7 +707,7 @@
                                 <!-- Upload: Parent ID -->
                                 <div class="col-md-6">
                                     <label class="form-label fw-semibold"><i
-                                            class="fa-solid fa-id-badge me-2 text-success"></i>Parent/Guardian ID</label>
+                                            class="fa-solid fa-id-badge me-2 text-green"></i>Parent/Guardian ID</label>
                                     <input type="file" class="form-control" required />
                                 </div>
     
@@ -717,7 +722,7 @@
     
                             <!-- Submit Button -->
                             <div class="text-center mt-4">
-                                <button class="btn btn-success px-5 py-2 rounded-pill">
+                                <button class="btn btn-green px-5 py-2 rounded-pill">
                                     <i class="fa-solid fa-upload me-2"></i>Submit Application
                                 </button>
                             </div>
@@ -728,73 +733,62 @@
             </div>
         </section>
     </main>
-      
+    
 
     <!-- Footer -->
-    <footer class="footer-section bg-light pt-5 pb-3 mt-5 border-top shadow-sm">
+    <footer class="footer-section footer-green pt-5 pb-3 mt-5 border-top shadow-sm">
         <div class="container">
             <div class="row text-start">
                 <!-- About -->
                 <div class="col-md-4 mb-4" data-aos="fade-up">
-                    <h6 class="fw-bold text-primary mb-3"><i class="fa-solid fa-graduation-cap me-2"></i>About
-                        Thengisangaye
-                        Primary School
-
-                    </h6>
+                    <h6 class="fw-bold text-green mb-3"><i class="fa-solid fa-graduation-cap me-2 text-green"></i>About
+                        Thengisangaye Primary School</h6>
                     <p>
-                        Thengisangaye Primary School
-                        is dedicated to providing a nurturing and innovative environment for learners from
-                        Grade R to Grade 12. Our mission is to inspire excellence and lifelong learning.
+                        Thengisangaye Primary School is dedicated to providing a nurturing and innovative environment
+                        for learners from Grade R to Grade 7. Our mission is to inspire excellence and lifelong learning.
                     </p>
-                    <p class="small text-muted mb-0">&copy; 2025 Thengisangaye Primary School
-                        . All rights reserved.</p>
+                    <p class="small text-muted mb-0">&copy; 2025 Thengisangaye Primary School. All rights reserved.</p>
                 </div>
                 <!-- Quick Links -->
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <h6 class="fw-bold text-primary mb-3"><i class="fa-solid fa-link me-2"></i>Quick Links</h6>
+                    <h6 class="fw-bold text-green mb-3"><i class="fa-solid fa-link me-2 text-green"></i>Quick Links</h6>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="index.html" class="text-decoration-none text-dark"><i
-                                    class="fa-solid fa-house me-2 text-primary"></i>Home</a></li>
+                                    class="fa-solid fa-house me-2 text-green"></i>Home</a></li>
                         <li class="mb-2"><a href="about.html" class="text-decoration-none text-dark"><i
-                                    class="fa-solid fa-users me-2 text-primary"></i>About Us</a></li>
+                                    class="fa-solid fa-users me-2 text-green"></i>About Us</a></li>
                         <li class="mb-2"><a href="services.html" class="text-decoration-none text-dark"><i
-                                    class="fa-solid fa-cogs me-2 text-primary"></i>Services</a></li>
+                                    class="fa-solid fa-cogs me-2 text-green"></i>Services</a></li>
                         <li class="mb-2"><a href="gallery.html" class="text-decoration-none text-dark"><i
-                                    class="fa-solid fa-image me-2 text-primary"></i>Gallery</a></li>
+                                    class="fa-solid fa-image me-2 text-green"></i>Gallery</a></li>
                         <li class="mb-2"><a href="apply.html" class="text-decoration-none text-dark"><i
-                                    class="fa-solid fa-file-signature me-2 text-primary"></i>Apply Now</a></li>
+                                    class="fa-solid fa-file-signature me-2 text-green"></i>Apply Now</a></li>
                         <li class="mb-2"><a href="contact.html" class="text-decoration-none text-dark"><i
-                                    class="fa-solid fa-envelope-open-text me-2 text-primary"></i>Contact Us</a></li>
+                                    class="fa-solid fa-envelope-open-text me-2 text-green"></i>Contact Us</a></li>
                     </ul>
                 </div>
                 <!-- Contact & Social -->
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <h6 class="fw-bold text-primary mb-3"><i class="fa-solid fa-address-book me-2"></i>Contact Us</h6>
-                    <p class="mb-1"><i class="fa-solid fa-location-dot me-2 text-primary"></i>Thokoza Area-Ulundi Next
-                        to
-                        Prince <span>Mangosuthu Airport</span>
-                    </p>
-                    <p class="mb-1"><i class="fa-solid fa-phone me-2 text-primary"></i>+27 72 630 1604-<em>Principal:
-                            Mrs
+                    <h6 class="fw-bold text-green mb-3"><i class="fa-solid fa-address-book me-2 text-green"></i>Contact Us
+                    </h6>
+                    <p class="mb-1"><i class="fa-solid fa-location-dot me-2 text-green"></i>Thokoza Area-Ulundi Next to
+                        Prince <span>Mangosuthu Airport</span></p>
+                    <p class="mb-1"><i class="fa-solid fa-phone me-2 text-green"></i>+27 72 630 1604 - <em>Principal: Mrs
                             A.F Mfeka (Lady-P)</em></p>
-                    <p class="mb-1"><i class="fa-solid fa-envelope me-2 text-primary"></i>
-                        <a href="mailto:info@modernschool.edu"
+                    <p class="mb-1"><i class="fa-solid fa-envelope me-2 text-green"></i>
+                        <a href="mailto:THENGISANGAYE-PS@kznschools.gov.za"
                             class="text-decoration-none text-dark">THENGISANGAYE-PS@kznschools.gov.za</a>
                     </p>
-                    <div class="mt-3">
-                        <a href="#" class="text-primary me-3 fs-4" data-aos="zoom-in" data-aos-delay="300"><i
-                                class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="text-primary me-3 fs-4" data-aos="zoom-in" data-aos-delay="400"><i
-                                class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="text-primary me-3 fs-4" data-aos="zoom-in" data-aos-delay="500"><i
-                                class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="text-primary fs-4" data-aos="zoom-in" data-aos-delay="600"><i
-                                class="fa-brands fa-linkedin-in"></i></a>
+                    <div class="mt-3 icon-green">
+                        <a href="#" class="me-3 fs-4"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="me-3 fs-4"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="me-3 fs-4"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="fs-4"><i class="fa-brands fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-
+    </footer>
         <!-- Bootstrap 5 JS Bundle -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
