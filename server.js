@@ -189,9 +189,16 @@ Thengisangaye Primary School`,
     }
 });
 
-// Test route
+const path = require('path');
+
+// Serve index.html from the root directory for the homepage
 app.get('/', (req, res) => {
-    res.send('📬 Contact form backend is running!');
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// Serve other static files (CSS, JS, images) from the root directory
+app.get('/:file', (req, res) => {
+    res.sendFile(path.join(__dirname, req.params.file));
 });
 
 // Start server
