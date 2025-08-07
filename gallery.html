@@ -218,8 +218,8 @@
         .hero-image-section {
             background: linear-gradient(120deg, #047331 0%, #6bc1ff 100%);
             position: relative;
-            min-height: 100vh;
-            height: 105vh;
+            min-height: 120vh;
+            height: 120vh;
             width: 98.5vw;
             margin-bottom: 2.5rem;
             /* border-radius: 0 0 24px 24px; */
@@ -618,28 +618,38 @@ background-color: #047331;  border: none;
                 <span class="navbar-toggler-icon"></span>
             </button>
     
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto fw-semibold">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-primary text-white px-3 ms-2" href="apply.html">Apply
-                            Now</a></li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Gallery
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+                        <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-primary text-white px-3 ms-2" href="apply.html">Apply Now</a>
+                </li>
+            </ul>
+        </div>
+
         </div>
     </nav>
 
     <!-- Animated Hero Image Section -->
-    <section class="hero-image-section d-flex align-items-center justify-content-center"
-        style="min-height: 340px; position: relative; overflow: hidden;margin-top: -70px;">
+<section class="hero-image-section d-flex align-items-center justify-content-center"
+    style="min-height: 450px; position: relative; overflow: hidden;margin-top: -95px;">
         <img src="./images/Replace.jpg"
             alt="School Hero" class="hero-img" data-aos="zoom-in" />
         <div class="hero-overlay"></div>
         <div class="hero-text text-center w-100" data-aos="fade-down">
-            <h1 class="display-4 fw-bold text-white mb-3" style="text-shadow:0 4px 24px #0008;">Inspiring Excellence
+            <h1 class="display-4 fw-bold text-white mb-3" style="text-shadow:0 4px 24px #0008;">School Gallery
             </h1>
             <p class="lead text-white mb-4" style="text-shadow:0 2px 8px #0008;">A place where every child shines</p>
             <a href="apply.html" class="btn btn-light btn-lg shadow">Join Us</a>

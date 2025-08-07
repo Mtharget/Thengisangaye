@@ -18,14 +18,13 @@
     <style>
         /* Modern Polished School Website Styles */
 
-        /* General Body */
+         /* General Body */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #f9fafb 0%, #e3e9f7 100%);
             color: #212529;
             min-height: 100vh;
             overflow-x: hidden;
-
         }
     
         /* Toggler Button: Floating Circle with Animated Bars */
@@ -220,7 +219,7 @@
 
             position: relative;
             min-height: 105vh;
-            height: 105vh;
+            height: 130vh;
             width: 98.5vw;
             margin-bottom: 2.5rem;
             /* border-radius: 0 0 24px 24px; */
@@ -235,7 +234,7 @@
             overflow-x: hidden;
 
             width: 98.5vw;
-            height: 110vh;
+            height: 130vh;
             object-fit: cover;
             object-position: center;
             filter: brightness(0.7) blur(1px) grayscale(10%);
@@ -564,7 +563,6 @@
 
 
 .about-hero {
-            /* background: linear-gradient(120deg, #007bff 0%, #6bc1ff 100%); */
             color: #fff;
             padding: 70px 0 40px 0;
             text-align: center;
@@ -725,6 +723,37 @@
     background-color: #035a28;
 }
 
+
+.floating-img {
+  position: absolute;
+  bottom: 0;
+  right: 6px;
+  width: 10vw;          /* 10% of viewport width */
+  max-width: 120px;     /* max size */
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+  transition: width 0.3s ease;
+  z-index: 10;
+}
+
+/* For small devices: reduce size and reposition */
+@media (max-width: 768px) {
+  .floating-img {
+    width: 15vw;
+    max-width: 80px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-img {
+    width: 20vw;
+    max-width: 60px;
+    right: 12px;
+  }
+}
+
     </style>
 </head>
 
@@ -741,28 +770,37 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
     
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto fw-semibold">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-primary text-white px-3 ms-2" href="apply.html">Apply
-                            Now</a></li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Gallery
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+                        <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-primary text-white px-3 ms-2" href="apply.html">Apply Now</a>
+                </li>
+            </ul>
+        </div>
+
         </div>
     </nav>
     <!-- Animated Hero Image Section -->
-    <section class="hero-image-section d-flex align-items-center justify-content-center"
-        style="min-height: 340px; position: relative; overflow: hidden;  margin-top: -70px;
- ">
+<section class="hero-image-section d-flex align-items-center justify-content-center"
+    style="min-height: 360px; position: relative; overflow: hidden;margin-top: -150px;">
         <img src="./images/Block .jpg"
             alt="School Hero" class="hero-img" data-aos="zoom-in" />
         <div class="hero-overlay"></div>
         <div class="hero-text text-center w-100" data-aos="fade-down">
-            <h1 class="display-4 fw-bold text-white mb-3" style="text-shadow:0 4px 24px #0008;">Inspiring Excellence
+            <h1 class="display-4 fw-bold text-white mb-3" style="text-shadow:0 4px 24px #0008;">About Us
             </h1>
             <p class="lead text-white mb-4" style="text-shadow:0 2px 8px #0008;">A place where every child shines</p>
             <a href="apply.html" class="btn btn-light btn-lg shadow">Join Us</a>
@@ -778,43 +816,104 @@
             <img src="./images/principal.jpg"
                 alt="School Life" class="about-img img-fluid">
         </div>
-        <div class="col-lg-6" data-aos="fade-left">
-            <h2><i class=""></i> Who We Are</h2>
-            <p class="fs-5">
-               Thengisayangaye Primary School is a vibrant, inclusive community dedicated to nurturing the academic, creative, and
-                personal growth of every learner. Our passionate educators, innovative programs, and supportive
-                environment empower students to become confident, responsible, and compassionate citizens.
-            </p>
-            <ul class="list-unstyled fs-6">
-                <li class="mb-2"><i class="fa-solid fa-check-circle text-success me-2"></i>Founded in 2000</li>
-                <li class="mb-2"><i class="fa-solid fa-users text-primary me-2"></i>Over 700 students enrolled</li>
-                <li class="mb-2"><i class="fa-solid fa-chalkboard-user text-info me-2"></i>Highly qualified, caring
-                    staff</li>
-            </ul>
-        </div>
-    </div>
-    <div class="about-values">
-        <div class="value-card" data-aos="fade-up" data-aos-delay="100">
-            <i class="fa-solid fa-eye icon"></i>
-            <div class="value-title">Vision</div>
-            <div class="value-desc">To be a beacon of quality education, inspiring students to achieve their fullest
-                potential.</div>
-        </div>
-        <div class="value-card" data-aos="fade-up" data-aos-delay="200">
-            <i class="fa-solid fa-gem icon"></i>
-            <div class="value-title">Values</div>
-            <div class="value-desc">
-                Integrity, Innovation, Community, Excellence.
+            <div class="col-lg-6" data-aos="fade-left">
+                <h2><i class=""></i> About Us</h2>
+                <p class="fs-5">
+                    Thengisayangaye Primary School Established in 2000 in the Thokoza area of Ulundi, the school began with
+                    just Grade 1 and two teachers under the leadership of Mrs. M Sikhosana, who retired in 2014. Now a public
+                    school for boys and girls aged five to twelve (Grade R to 7), the school aims to lay a strong and effective
+                    foundation for holistic child development. Its mission is to help learners reach their full potential by
+                    promoting
+                    responsibility, respect, discipline, and confidence. The school also strives for excellence and efficiency
+                    through
+                    meaningful educator-learner interaction, support for socialisation, identity formation, community engagement,
+                    and
+                    preparing learners to thrive in society as responsible adults.
+                </p>
+                <ul class="list-unstyled fs-6">
+                    <li class="mb-2"><i class="fa-solid fa-check-circle text-success me-2"></i>Founded in 2000</li>
+                    <li class="mb-2"><i class="fa-solid fa-users text-primary me-2"></i>Over 700 students enrolled</li>
+                    <li class="mb-2"><i class="fa-solid fa-chalkboard-user text-info me-2"></i>Highly qualified, caring
+                        staff</li>
+                </ul>
             </div>
-        </div>
-        <div class="value-card" data-aos="fade-up" data-aos-delay="300">
-            <i class="fa-solid fa-lightbulb icon"></i>
-            <div class="value-title">Mission</div>
-            <div class="value-desc">
-                To provide a holistic education that empowers students to succeed in a rapidly changing world.
             </div>
-        </div>
-    </div>
+            <div class="about-values">
+                <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-eye icon"></i>
+                    <div class="value-title">Vision</div>
+                    <div class="value-desc">Is to lay a good and effective foundation in the development of the child’s totality.
+                    </div>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-gem icon"></i>
+                    <div class="value-title">Values</div>
+                    <div class="value-desc">
+                        Responsibility, Respect ,Self-discipline, Confidence, Social and emotional development, Community
+                        involvement, Educational excellence
+            
+                    </div>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-lightbulb icon"></i>
+                    <div class="value-title">Mission</div>
+                    <div class="value-desc">
+                        Is to provide our learners with opportunities to develop to their full potential by being
+                        active, responsible, respectful, self-disciplined and confident.
+            
+                    </div>
+                </div>
+            </div>
+
+    <section class="mt-5 position-relative" data-aos="fade-right" style="padding-bottom: 60px;">
+        <h2 class="section-title text-green" data-aos="zoom-in">School Management and Staff</h2>
+    
+        <ul>
+            <li data-aos="fade-up"><b>School Principal:</b> Mrs A. F Mfeka</li>
+            <li data-aos="fade-up" data-aos-delay="100"><b>Deputy Principal:</b> Mr Z. D Zulu</li>
+        </ul>
+    
+        <p data-aos="fade-right" data-aos-delay="150">
+            <strong><b>Foundation Phase Grade R to 3</b></strong>
+        </p>
+        <ul>
+            <li data-aos="fade-up"><b>Departmental Head:</b> Mrs O.M Mtshali</li>
+            <li data-aos="fade-up" data-aos-delay="50"><b>Grade R:</b> Ms M.C Mhlophe & Ms G.F Magwaza</li>
+            <li data-aos="fade-up" data-aos-delay="100"><b>Grade 1:</b> Mrs M.S Sikhakhane & Ms T.E Nene</li>
+            <li data-aos="fade-up" data-aos-delay="150"><b>Grade 2:</b> Mrs N Magubane & Mrs N Mvubu</li>
+            <li data-aos="fade-up" data-aos-delay="200"><b>Grade 3:</b> Mrs T.M Mzila & Mrs S.F Mdlalose</li>
+        </ul>
+    
+        <p data-aos="fade-right" data-aos-delay="250">
+            <strong><b>Intermediate and Senior Phase Grade 4 to 7</b></strong>
+        </p>
+        <ul>
+            <li data-aos="fade-up"><b>Departmental Head:</b> Ms B N G Mtshali</li>
+            <li data-aos="fade-up" data-aos-delay="50"><b>Grade 4:</b> Mrs B.P Mbatha, Mrs N.D Zungu & Mrs N.P Mbatha</li>
+            <li data-aos="fade-up" data-aos-delay="100"><b>Grade 5:</b> Mrs N.O Mthembu & Mr S.C Masondo</li>
+            <li data-aos="fade-up" data-aos-delay="150"><b>Grade 6:</b> Mrs S.A Ngema & Mrs N.E Mfeka</li>
+            <li data-aos="fade-up" data-aos-delay="200"><b>Grade 7:</b> Mrs S.P Ncanana & Mr N. Ngcobo</li>
+        </ul>
+    
+        <p data-aos="fade-right" data-aos-delay="300">
+            <strong><b>School Governance (SGB)</b></strong>
+        </p>
+        <ul>
+            <li data-aos="fade-up"><b>Chairperson:</b> Mr M.T Mbatha</li>
+            <li data-aos="fade-up" data-aos-delay="50"><b>Deputy Chair:</b> Mrs Madumisa Zungu</li>
+            <li data-aos="fade-up" data-aos-delay="100"><b>Secretary:</b> Mrs S.F Mdlalose</li>
+            <li data-aos="fade-up" data-aos-delay="150"><b>Deputy Secretary:</b> Mrs N Magubane</li>
+            <li data-aos="fade-up" data-aos-delay="200"><b>Treasury:</b>
+                Mrs N Sithole; Mr N Ngcobo; Mrs Kunene; Mr Sikhakhane; Mr Ngobese
+            </li>
+        </ul>
+    
+        <!-- Small image at bottom right -->
+<img src="./images/School badge.jpg" alt="School" class="floating-img" data-aos="zoom-in" data-aos-delay="400" />
+
+    </section>
+
+    
     <div class="about-stats">
         <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
             <i class="fa-solid fa-trophy"></i>

@@ -709,23 +709,32 @@ section.mt-5 {
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto fw-semibold">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-primary text-white px-3 ms-2"
-                            href="apply.html">Apply Now</a></li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Gallery
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+                        <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-primary text-white px-3 ms-2" href="apply.html">Apply Now</a>
+                </li>
+            </ul>
         </div>
+
     </nav>
 
         <!-- Animated Hero Image Section -->
-        <section class="hero-image-section d-flex align-items-center justify-content-center position-relative"
-            style="min-height: 340px; overflow: hidden;margin-top: -150px;">
+    <section class="hero-image-section d-flex align-items-center justify-content-center"
+        style="min-height: 360px; position: relative; overflow: hidden;margin-top: -150px;">
             <div class="hero-img-slider w-100 h-100 position-absolute top-0 start-0">
                 <img src="./images/Landing2.jpg"
                     alt="School Hero 1" class="hero-img-slide active" />

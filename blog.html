@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Admission</title>
+    <title>About Us</title>
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -15,15 +15,17 @@
     <!-- FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 
-      <style>
+    <style>
         /* Modern Polished School Website Styles */
-   /* General Body */
+
+        /* General Body */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #f9fafb 0%, #e3e9f7 100%);
             color: #212529;
             min-height: 100vh;
             overflow-x: hidden;
+
         }
     
         /* Toggler Button: Floating Circle with Animated Bars */
@@ -214,10 +216,11 @@
             /* box-shadow: 0 4px 16px rgba(0, 86, 179, 0.18); */
         }
         .hero-image-section {
-            background: linear-gradient(120deg, #047331 0%, #6bc1ff 100%);
+            overflow-x: hidden;
+
             position: relative;
-            min-height: 100vh;
-            height: 120vh;
+            min-height: 105vh;
+            height: 105vh;
             width: 98.5vw;
             margin-bottom: 2.5rem;
             /* border-radius: 0 0 24px 24px; */
@@ -229,8 +232,10 @@
         }
 
         .hero-img {
+            overflow-x: hidden;
+
             width: 98.5vw;
-            height: 120vh;
+            height: 110vh;
             object-fit: cover;
             object-position: center;
             filter: brightness(0.7) blur(1px) grayscale(10%);
@@ -289,7 +294,7 @@
             }
         }
 
-            
+           
 @media (max-width: 767px) {
     .hero-image-section, .hero-img-slider, .hero-img-slide {
         min-height: 760px !important;
@@ -323,8 +328,14 @@
     0% { transform: scale(1);}
     100% { transform: scale(1.07);}
 }
-
-    
+        /* Hero Section */
+        .section-title {
+            font-weight: 800;
+            font-size: 2.7rem;
+            color: #007bff;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+        }
 
         .lead {
             font-size: 1.25rem;
@@ -385,6 +396,73 @@
         p {
             color: #555;
         }
+
+        
+
+        
+/* Featured Post */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Post Titles */
+.card-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Post Description */
+.card-text {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Buttons */
+.btn-dark, .btn-outline-dark {
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 30px;
+}
+
+.btn-outline-dark {
+    border: 2px solid #333;
+}
+
+/* Sidebar Styles */
+.card-header {
+    background-color: #f8f9fa;
+    font-weight: 500;
+}
+
+.list-group-item {
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.list-group-item a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.list-group-item a:hover {
+    color: #007bff;
+}
 
 
         .footer-section {
@@ -512,102 +590,22 @@
                 font-size: 1.2rem !important;
             }
         }
+        
 
 
 
 
 
-/* ========== Apply Now Section Styling ========== */
-.apply-now-section {
-  background: #fdfdfd;
-  border-radius: 20px;
-  box-shadow: 0 12px 40px rgba(0, 123, 255, 0.05);
-  transition: all 0.3s ease;
-}
-
-.apply-now-section:hover {
-  box-shadow: 0 16px 48px rgba(0, 123, 255, 0.12);
-}
-
-/* ========== Upload Form Styling ========== */
-#uploadForm {
-  margin-top: 2rem;
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(4px);
-  border-radius: 16px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
-  animation: fadeIn 0.4s ease-in-out;
-}
-
-/* Input Container Styling */
-#uploadForm .col-md-6 {
-  background: #ffffff;
-  border: 1px solid #e9ecef;
-  padding: 1rem;
-  border-radius: 12px;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-}
-
-#uploadForm .col-md-6:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-}
-
-/* File Input Field */
-#uploadForm input[type="file"] {
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
-  border-radius: 8px;
-  padding: 10px 12px;
-  font-size: 0.95rem;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
-}
-
-#uploadForm input[type="file"]:focus {
-  border-color: #047331;
-  outline: none;
-  box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
-}
-
-/* Labels */
-#uploadForm label {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 6px;
-  display: inline-block;
-}
-
-/* Submit Button */
-#uploadForm .btn-success {
-  font-weight: 600;
-  font-size: 1rem;
-  box-shadow: 0 6px 14px rgba(40, 167, 69, 0.2);
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-#uploadForm .btn-success:hover {
-  transform: scale(1.03);
-  background-color: #218838;
-}
-
-/* Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 
 
-.btn-primary {
+
+
+        
+
+        
+
+        .btn-primary {
             background-color: #047331;
   border: none;
 }
@@ -625,20 +623,6 @@
     background-color: #035a28;
 }
 
-/* Custom green checkbox */
-.form-check-input:checked {
-    background-color: #047331;
-    border-color: #047331;
-}
-
-.form-check-input {
-    border: 2px solid #047331;
-    cursor: pointer;
-}
-
-
-
-
     </style>
 </head>
 
@@ -655,79 +639,62 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
     
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto fw-semibold">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Gallery
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
-                    <li><a class="dropdown-item" href="blog.html">Blog</a></li>
-                </ul>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-            <li class="nav-item"><a class="nav-link btn btn-primary text-white px-3 ms-2" href="apply.html">Apply Now</a>
-            </li>
-        </ul>
-    </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto fw-semibold">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Gallery
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+                        <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-primary text-white px-3 ms-2" href="apply.html">Apply Now</a>
+                </li>
+            </ul>
+        </div>
 
+        </div>
     </nav>
-
     <!-- Animated Hero Image Section -->
-<section class="hero-image-section d-flex align-items-center justify-content-center"
-    style="min-height: 360px; position: relative; overflow: hidden;margin-top: -90px;">
-        <img src="./images/Apply.jpg"
+    <section class="hero-image-section d-flex align-items-center justify-content-center"
+        style="min-height: 340px; position: relative; overflow: hidden;  margin-top: -70px;
+ ">
+        <img src="./images/Block .jpg"
             alt="School Hero" class="hero-img" data-aos="zoom-in" />
         <div class="hero-overlay"></div>
         <div class="hero-text text-center w-100" data-aos="fade-down">
-            <h1 class="display-4 fw-bold text-white mb-3" style="text-shadow:0 4px 24px #0008;">School Admission
+            <h1 class="display-4 fw-bold text-white mb-3" style="text-shadow:0 4px 24px #0008;">School Blog</h1>
             </h1>
             <p class="lead text-white mb-4" style="text-shadow:0 2px 8px #0008;">A place where every child shines</p>
             <a href="apply.html" class="btn btn-light btn-lg shadow">Join Us</a>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="container my-5">
-        <section data-aos="fade-up" data-aos-duration="1000">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="p-5 bg-light rounded-4 shadow apply-now-section">
-                        <h2 class="fw-bold mb-4 text-green text-center">
-                            <i class="fa-solid fa-user-graduate me-2 text-green"></i>Admissions 2026 Are Open!
-                        </h2>
-    <p class="text-muted text-center mb-3">
-        Please review our application guidelines carefully. You can download the official admission form
-        below, fill it out, and submit it to the school with all required documents.
-    </p>
-    
-    <!-- Download Application Form -->
-    <div class="text-center mb-4">
-        <a href="" download class="btn btn-outline-success px-4 py-2 rounded-pill">
-            <i class="fa-solid fa-download me-2"></i>Download Application Form (PDF)
-        </a>
+<h3 class="fw-bold mb-4" data-aos="fade-up" data-aos-duration="1200">Latest Posts</h3>
+<div class="row g-4" id="latest-posts-container">
+    <div class="col-12 d-flex flex-column align-items-center justify-content-center py-5" data-aos="fade-up"
+        data-aos-duration="1000" style="border: 2px dashed #047331; border-radius: 12px; background: #e6f4ea;">
+        <i class="fa-solid fa-spinner fa-spin fa-3x text-success mb-3"></i>
+        <h4 class="text-success fw-bold mb-2">📝 Blog Coming Soon!</h4>
+        <p class="text-success fs-5 text-center px-3" style="max-width: 500px;">
+            We’re working hard to bring you exciting updates, stories, and news from Thengisangaye Primary School. Stay
+            tuned!
+        </p>
     </div>
+</div>
+
+        </div>
     
-    <!-- Instructions -->
-    <div class="alert alert-info text-center mt-4" role="alert">
-        After completing the form, please hand it in at the school office or email a scanned copy with
-        the
-        required documents.
     </div>
-
-    
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-
+    </div>
+    </div>
     <!-- Footer -->
     <footer class="footer-section footer-green pt-5 pb-3 mt-5 border-top shadow-sm">
         <div class="container">
@@ -782,6 +749,7 @@
             </div>
         </div>
     </footer>
+
         <!-- Bootstrap 5 JS Bundle -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -795,16 +763,6 @@
             });
         </script>
 
-
-
-
-<script>
-    function toggleUploadForm() {
-        const checkbox = document.getElementById('acceptTerms');
-        const form = document.getElementById('uploadForm');
-        form.style.display = checkbox.checked ? 'block' : 'none';
-    }
-</script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         // ...existing hero slider code...
@@ -818,6 +776,70 @@
         });
     });
 </script>
+
+<script>
+    async function loadLatestPosts() {
+        try {
+            const response = await fetch('http://localhost:3000/posts');
+            const posts = await response.json();
+
+            const container = document.getElementById('latest-posts-container');
+            container.innerHTML = ''; // Clear existing posts
+
+            posts.forEach(post => {
+                // Create the card div (using Bootstrap classes similar to your example)
+                const colDiv = document.createElement('div');
+                colDiv.className = 'col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center';
+                colDiv.setAttribute('data-aos', 'fade-up');
+                colDiv.setAttribute('data-aos-duration', '1500');
+
+                const cardDiv = document.createElement('div');
+                cardDiv.className = 'card fixed-card-size shadow border-0';
+
+                // Image: use a placeholder if post.image is missing
+                const img = document.createElement('img');
+                img.className = 'card-img-top';
+                img.alt = post.title;
+                img.src = post.image || 'images/default-post.jpg'; // Replace with your default image path
+
+                // Card body
+                const cardBody = document.createElement('div');
+                cardBody.className = 'card-body';
+
+                const title = document.createElement('h5');
+                title.className = 'card-title';
+                title.textContent = post.title;
+
+                const content = document.createElement('p');
+                content.className = 'card-text';
+                content.textContent = post.content.length > 100 ? post.content.substring(0, 100) + '...' : post.content;
+
+                const readMore = document.createElement('a');
+                readMore.className = 'btn btn-outline-dark';
+                readMore.href = `post.html?id=${post._id}`; // Link to your post page, pass id as query param
+                readMore.textContent = 'Read More';
+
+                // Append elements
+                cardBody.appendChild(title);
+                cardBody.appendChild(content);
+                cardBody.appendChild(readMore);
+
+                cardDiv.appendChild(img);
+                cardDiv.appendChild(cardBody);
+
+                colDiv.appendChild(cardDiv);
+
+                container.appendChild(colDiv);
+            });
+        } catch (error) {
+            console.error('Failed to load posts:', error);
+        }
+    }
+
+    // Load posts when page loads
+    window.onload = loadLatestPosts;
+</script>
+
 </body>
 
 </html>
