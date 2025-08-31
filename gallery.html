@@ -602,6 +602,69 @@ background-color: #047331;  border: none;
 
 
 
+
+
+/* Folder hover effect */
+.folder-img.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.folder-img.hover-scale:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Modal gallery image zoom */
+.hover-zoom {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.hover-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* Dark fullscreen modal */
+.gallery-modal .modal-content {
+  background-color: #111;
+}
+
+
+.footer-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .footer-logo-wrapper {
+    justify-content: center; /* Center logo on small screens */
+  }
+}
+
+.footer-logo {
+  max-height: 100px;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+/* Make all modal gallery images the same height */
+.gallery-modal img {
+  width: 100%;
+  height: 250px; /* you can adjust (200px, 300px, etc.) */
+  object-fit: cover; /* crops without stretching */
+  border-radius: 10px; /* keeps smooth corners */
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Smooth zoom hover */
+.gallery-modal img:hover {
+  transform: scale(1.05);
+}
+
+
+
     </style>
 </head>
 
@@ -618,26 +681,26 @@ background-color: #047331;  border: none;
                 <span class="navbar-toggler-icon"></span>
             </button>
     
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto fw-semibold">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="facilities.html">Facilities</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Gallery
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
-                        <li><a class="dropdown-item" href="blog.html">Blog</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                <li class="nav-item"><a class="nav-link btn btn-primary text-white px-3 ms-2" href="apply.html">Apply Now</a>
-                </li>
-            </ul>
-        </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto fw-semibold">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="facilities.html">Facilities</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Gallery
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+                    <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link btn btn-primary text-white px-3 ms-2" href="apply.html">Apply Now</a>
+            </li>
+        </ul>
+    </div>
 
         </div>
     </nav>
@@ -658,196 +721,393 @@ background-color: #047331;  border: none;
 
     <!-- Main Content -->   
 <main class="container my-5">
-<!-- About Section -->
-<section id="gallery" class="py-5">
-    <section id="event-gallery" class="py-5">
-        <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="fw-bold text-green"><i class=""></i>School Moments</h2>
-                <p class="text-muted">Key highlights and programs that define our school community and culture.</p>
-            </div>
-    
-            <div class="row g-4">
-                <!-- Repeatable Event Block -->
-                <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="gallery-item">
-                        <img src="images/closing function.jpg" alt="Closing Function eHlathini Ulundi"
-                            class="img-fluid rounded-3">
-                        <div class="caption">
-                            <h6 class="fw-semibold mt-2">Closing Function – eHlathini Ulundi</h6>
-                            <p class="text-muted small">End-of-term celebration with staff, learners, and community leaders.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="150">
-                    <div class="gallery-item">
-                        <img src="images/principal.jpg" alt="Lady-P Mrs A.F Mfeka" class="img-fluid rounded-3">
-                        <div class="caption">
-                            <h6 class="fw-semibold mt-2">Principal Lady-P – Mrs A.F Mfeka</h6>
-                            <p class="text-muted small">Leadership in action during school award ceremonies and functions.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="gallery-item">
-                        <img src="images/lady p.jpg" alt="Lady-P awarding token" class="img-fluid rounded-3">
-                        <div class="caption">
-                            <h6 class="fw-semibold mt-2">Appreciation – Mrs WDS Sibisi</h6>
-                            <p class="text-muted small">Honoring the Ward Inspector from Ondini for continued support.</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="250">
-                    <div class="gallery-item">
-                        <img src="images/library.jpg" alt="ELITS Program" class="img-fluid rounded-3">
-                        <div class="caption">
-                            <h6 class="fw-semibold mt-2">ELITS Program – Ulundi Library</h6>
-                            <p class="text-muted small">Learners engage with literature and information literacy programs.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="gallery-item">
-                        <img src="images/observing culture.jpg" alt="Observing Culture" class="img-fluid rounded-3">
-                        <div class="caption">
-                            <h6 class="fw-semibold mt-2">Observing Culture</h6>
-                            <p class="text-muted small">Learners showcase traditional attire, music, and food.</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="350">
-                    <div class="gallery-item">
-                        <img src="images/health.jpg" alt="Health Partnership" class="img-fluid rounded-3">
-                        <div class="caption">
-                            <h6 class="fw-semibold mt-2">Partnering with Health Dept.</h6>
-                            <p class="text-muted small">School-wide health screening, awareness campaigns & support.</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="gallery-item">
-                        <img src="images/career dress.jpg" alt="Career Dress-Up" class="img-fluid rounded-3">
-                        <div class="caption">
-                            <h6 class="fw-semibold mt-2">Career Dress-Up Day</h6>
-                            <p class="text-muted small">Learners dress up to reflect their future career aspirations.</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="450">
-                    <div class="gallery-item">
-                        <img src="images/beauty.jpg" alt="Beauty Contest" class="img-fluid rounded-3">
-                        <div class="caption">
-                            <h6 class="fw-semibold mt-2">Our Beauty Contest</h6>
-                            <p class="text-muted small">Celebrating confidence and self-expression through fashion and
-                                talent.</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="gallery-item">
-                        <img src="images/renovation.jpg" alt="Renovations" class="img-fluid rounded-3">
-                        <div class="caption">
-                            <h6 class="fw-semibold mt-2">Renovations in Progress</h6>
-                            <p class="text-muted small">Ongoing improvements to classrooms, facilities, and infrastructure.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="550">
-                    <div class="gallery-item">
-                        <img src="images/grade r farewell.jpg" alt="Grade R Graduation" class="img-fluid rounded-3">
-                        <div class="caption">
-                            <h6 class="fw-semibold mt-2">Grade R Mini-Graduation</h6>
-                            <p class="text-muted small">Our youngest learners celebrate their first big step in education.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="600">
-                    <div class="gallery-item">
-                        <img src="images/borehole.jpg" alt="Bore Hole" class="img-fluid rounded-3">
-                        <div class="caption">
-                            <h6 class="fw-semibold mt-2">Water Project – Borehole</h6>
-                            <p class="text-muted small">Clean water initiative ensuring sustainability for learners and
-                                staff.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="gallery" class="py-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-success">School Moments</h2>
+            <p class="text-muted">Click on any folder to view the pictures inside.</p>
         </div>
-    </section>
-      
-</section>
-  
 
-    </main>
-    <!-- Footer -->
-    <footer class="footer-section footer-green pt-5 pb-3 mt-5 border-top shadow-sm">
-        <div class="container">
-            <div class="row text-start">
-                <!-- About -->
-                <div class="col-md-4 mb-4" data-aos="fade-up">
-                    <h6 class="fw-bold text-green mb-3"><i class="fa-solid fa-graduation-cap me-2 text-green"></i>About
-                        Thengisangaye Primary School</h6>
-                    <p>
-                        Thengisangaye Primary School is dedicated to providing a nurturing and innovative environment
-                        for learners from Grade R to Grade 7. Our mission is to inspire excellence and lifelong learning.
-                    </p>
-                    <p class="small text-muted mb-0">&copy; 2025 Thengisangaye Primary School. All rights reserved.</p>
+        <div class="row g-4">
+
+<!-- Assembly Folder -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="folder-card text-center">
+        <div class="folder-icon bg-light rounded-circle shadow-lg d-flex align-items-center justify-content-center mx-auto"
+            data-bs-toggle="modal" data-bs-target="#assemblyModal" style="width:120px;height:120px;cursor:pointer;">
+            <i class="fas fa-chalkboard-teacher fa-3x text-primary"></i>
+        </div>
+        <h6 class="mt-3 fw-bold">Assembly</h6>
+    </div>
+</div>
+
+<!-- Choir Folder -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="folder-card text-center">
+        <div class="folder-icon bg-light rounded-circle shadow-lg d-flex align-items-center justify-content-center mx-auto"
+            data-bs-toggle="modal" data-bs-target="#choirModal" style="width:120px;height:120px;cursor:pointer;">
+            <i class="fas fa-music fa-3x text-danger"></i>
+        </div>
+        <h6 class="mt-3 fw-bold">Choir</h6>
+    </div>
+</div>
+
+<!-- Closing Function Folder -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="folder-card text-center">
+        <div class="folder-icon bg-light rounded-circle shadow-lg d-flex align-items-center justify-content-center mx-auto"
+            data-bs-toggle="modal" data-bs-target="#closingModal" style="width:120px;height:120px;cursor:pointer;">
+            <i class="fas fa-flag-checkered fa-3x text-success"></i>
+        </div>
+        <h6 class="mt-3 fw-bold">Closing Function</h6>
+    </div>
+</div>
+
+<!-- Farewell Folder -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="folder-card text-center">
+        <div class="folder-icon bg-light rounded-circle shadow-lg d-flex align-items-center justify-content-center mx-auto"
+            data-bs-toggle="modal" data-bs-target="#farewellModal" style="width:120px;height:120px;cursor:pointer;">
+            <i class="fas fa-user-friends fa-3x text-warning"></i>
+        </div>
+        <h6 class="mt-3 fw-bold">Farewell</h6>
+    </div>
+</div>
+
+<!-- Learners Folder -->
+<div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="folder-card text-center">
+        <div class="folder-icon bg-light rounded-circle shadow-lg d-flex align-items-center justify-content-center mx-auto"
+            data-bs-toggle="modal" data-bs-target="#learnersModal" style="width:120px;height:120px;cursor:pointer;">
+            <i class="fas fa-user-graduate fa-3x text-info"></i>
+        </div>
+        <h6 class="mt-3 fw-bold">Learners</h6>
+    </div>
+</div>
+
+
+            <!-- Garden Folder
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="folder-card text-center">
+                    <img src="Garden/cover.jpg" class="img-fluid rounded shadow-lg folder-img hover-scale" alt="Garden"
+                        data-bs-toggle="modal" data-bs-target="#gardenModal">
+                    <h6 class="mt-3 fw-bold">Garden</h6>
                 </div>
-                <!-- Quick Links -->
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <h6 class="fw-bold text-green mb-3"><i class="fa-solid fa-link me-2 text-green"></i>Quick Links</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-dark"><i
-                                    class="fa-solid fa-house me-2 text-green"></i>Home</a></li>
-                        <li class="mb-2"><a href="about.html" class="text-decoration-none text-dark"><i
-                                    class="fa-solid fa-users me-2 text-green"></i>About Us</a></li>
-                        <li class="mb-2"><a href="facilities.html" class="text-decoration-none text-dark"><i
-                                    class="fa-solid fa-cogs me-2 text-green"></i>Facilities</a></li>
-                        <li class="mb-2"><a href="gallery.html" class="text-decoration-none text-dark"><i
-                                    class="fa-solid fa-image me-2 text-green"></i>Gallery</a></li>
-                        <li class="mb-2"><a href="apply.html" class="text-decoration-none text-dark"><i
-                                    class="fa-solid fa-file-signature me-2 text-green"></i>Apply Now</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-decoration-none text-dark"><i
-                                    class="fa-solid fa-envelope-open-text me-2 text-green"></i>Contact Us</a></li>
-                    </ul>
+            </div> -->
+
+            <!-- Renovations Folder -->
+            <!-- <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="folder-card text-center">
+                    <img src="Renovations/cover.jpg" class="img-fluid rounded shadow-lg folder-img hover-scale"
+                        alt="Renovations" data-bs-toggle="modal" data-bs-target="#renoModal">
+                    <h6 class="mt-3 fw-bold">Renovations</h6>
                 </div>
-                <!-- Contact & Social -->
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <h6 class="fw-bold text-green mb-3"><i class="fa-solid fa-address-book me-2 text-green"></i>Contact Us
-                    </h6>
-                    <p class="mb-1"><i class="fa-solid fa-location-dot me-2 text-green"></i>Thokoza Area-Ulundi Next to
-                        Prince <span>Mangosuthu Airport</span></p>
-                    <p class="mb-1"><i class="fa-solid fa-phone me-2 text-green"></i>+27 72 630 1604 - <em>Principal: Mrs
-                            A.F Mfeka (Lady-P)</em></p>
-                    <p class="mb-1"><i class="fa-solid fa-envelope me-2 text-green"></i>
-                        <a href="mailto:THENGISANGAYE-PS@kznschools.gov.za"
-                            class="text-decoration-none text-dark">THENGISANGAYE-PS@kznschools.gov.za</a>
-                    </p>
-                    <div class="mt-3 icon-green">
-                        <a href="#" class="me-3 fs-4"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="me-3 fs-4"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="me-3 fs-4"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="fs-4"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div> -->
+
+            <!-- Spell Bee Folder -->
+            <!-- <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="folder-card text-center">
+                    <img src="SpellBee/cover.jpg" class="img-fluid rounded shadow-lg folder-img hover-scale"
+                        alt="Spell Bee" data-bs-toggle="modal" data-bs-target="#spellbeeModal">
+                    <h6 class="mt-3 fw-bold">Spell Bee</h6>
+                </div>
+            </div> -->
+
+            <!-- School Block Folder -->
+            <!-- <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="folder-card text-center">
+                    <img src="SchoolBlock/cover.jpg" class="img-fluid rounded shadow-lg folder-img hover-scale"
+                        alt="School Block" data-bs-toggle="modal" data-bs-target="#schoolblockModal">
+                    <h6 class="mt-3 fw-bold">School Block</h6>
+                </div>
+            </div> -->
+
+            <!-- Sport Day Folder -->
+            <!-- <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="folder-card text-center">
+                    <img src="SportDay/cover.jpg" class="img-fluid rounded shadow-lg folder-img hover-scale"
+                        alt="Sport Day" data-bs-toggle="modal" data-bs-target="#sportdayModal">
+                    <h6 class="mt-3 fw-bold">Sport Day</h6>
+                </div>
+            </div> -->
+
+            <!-- Teachers Folder -->
+            <!-- <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="folder-card text-center">
+                    <img src="Teachers/cover.jpg" class="img-fluid rounded shadow-lg folder-img hover-scale"
+                        alt="Teachers" data-bs-toggle="modal" data-bs-target="#teachersModal">
+                    <h6 class="mt-3 fw-bold">Teachers</h6>
+                </div>
+            </div> -->
+
+            <!-- Uniform Folder -->
+            <!-- <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="folder-card text-center">
+                    <img src="Uniform/cover.jpg" class="img-fluid rounded shadow-lg folder-img hover-scale"
+                        alt="Uniform" data-bs-toggle="modal" data-bs-target="#uniformModal">
+                    <h6 class="mt-3 fw-bold">Uniform</h6>
+                </div>
+            </div> -->
+
+            <!-- TB Folder -->
+            <!-- <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="folder-card text-center">
+                    <img src="TB/cover.jpg" class="img-fluid rounded shadow-lg folder-img hover-scale" alt="TB"
+                        data-bs-toggle="modal" data-bs-target="#tbModal">
+                    <h6 class="mt-3 fw-bold">TB</h6>
+                </div>
+            </div>
+
+        </div> -->
+    </section>
+
+
+    <!-- Assembly Modal -->
+    <div class="modal fade gallery-modal" id="assemblyModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold">Assembly</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-sm-6 col-md-4"><img src="images/Assembly/Assembly Activity.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/Assembly/Certification Of Appreciation Lady p.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/Assembly/covid.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/Assembly/Land3.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/Assembly/Land4.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/Assembly/Land5.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/Assembly/landing.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/Assembly/Landing2.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                                <div class="col-sm-6 col-md-4"><img src="images/Assembly/Learners3.jpg" class="img-fluid rounded shadow-sm hover-zoom">
+                                </div><div class="col-sm-6 col-md-4"><img src="images/Assembly/life2.jpg" class="img-fluid rounded shadow-sm hover-zoom">
+                                </div><div class="col-sm-6 col-md-4"><img src="images/Assembly/Prayer.jpg" class="img-fluid rounded shadow-sm hover-zoom">
+                                </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+    
+    <!-- Choir Modal -->
+    <div class="modal fade gallery-modal" id="choirModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold">Choir</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-sm-6 col-md-4"><img src="images/choirr/Choir.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/choirr/School choir.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/choirr/School choir2.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/choirr/Young choir.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Closing Function Modal -->
+    <div class="modal fade gallery-modal" id="closingModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold">Closing Function</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-sm-6 col-md-4"><img src="images/ClosingFunction/closing function.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/ClosingFunction/Closing function2.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/ClosingFunction/closing function3.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Farewell Modal -->
+    <div class="modal fade gallery-modal" id="farewellModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold">Farewell</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-sm-6 col-md-4"><img src="images/Farewell/Farewell.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/Farewell/Farewell1.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/Farewell/Farewell2.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/Farewell/Farewell3.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/Farewell/Farewell4.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/Farewell/Grade 7 Class 2024 Farewell.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/Farewell/grade r farewell.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Learners Modal -->
+    <div class="modal fade gallery-modal" id="learnersModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold">Learners</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-sm-6 col-md-4"><img src="images/Learners/Attendance Learnres.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/Learners/givaways.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/Learners/ICT Comp.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/Learners/Injection.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/Learners/Learners.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/Learners/Learners2.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/Learners/life3.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="images/Learners/Replace.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Garden Modal -->
+    <div class="modal fade gallery-modal" id="gardenModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold">Garden</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-sm-6 col-md-4"><img src="Garden/1.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="Garden/2.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="Garden/3.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="Garden/4.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="Garden/5.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="Garden/6.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="Garden/7.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                        <div class="col-sm-6 col-md-4"><img src="Garden/8.jpg"
+                                class="img-fluid rounded shadow-sm hover-zoom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<!-- Footer -->
+<footer class="footer-section footer-green pt-5 pb-3 mt-5 border-top shadow-sm">
+    <div class="container">
+        <div class="row text-start">
+
+            <!-- About / Logo -->
+            <div class="col-md-4 mb-4 text-center text-md-start" data-aos="fade-up">
+                <h6
+                    class="fw-bold text-green mb-3 d-flex align-items-center justify-content-center justify-content-md-start">
+                    <i class="fa-solid fa-graduation-cap me-2 text-green"></i>
+                    Thengisangaye Primary School
+                </h6>
+                <!-- Logo -->
+                <div class="footer-logo-wrapper mb-3">
+                    <img src="images/School badge.jpg" alt="Thengisangaye Primary School Logo"
+                        class="footer-logo img-fluid shadow-sm rounded" />
+                </div>
+                <p class="small text-muted mb-0">&copy; 2025 Thengisangaye Primary School. All rights reserved.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <h6 class="fw-bold text-green mb-3">
+                    <i class="fa-solid fa-link me-2 text-green"></i>Quick Links
+                </h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="index.html" class="text-decoration-none text-dark"><i
+                                class="fa-solid fa-house me-2 text-green"></i>Home</a></li>
+                    <li class="mb-2"><a href="about.html" class="text-decoration-none text-dark"><i
+                                class="fa-solid fa-users me-2 text-green"></i>About Us</a></li>
+                    <li class="mb-2"><a href="services.html" class="text-decoration-none text-dark"><i
+                                class="fa-solid fa-cogs me-2 text-green"></i>Services</a></li>
+                    <li class="mb-2"><a href="gallery.html" class="text-decoration-none text-dark"><i
+                                class="fa-solid fa-image me-2 text-green"></i>Gallery</a></li>
+                    <li class="mb-2"><a href="apply.html" class="text-decoration-none text-dark"><i
+                                class="fa-solid fa-file-signature me-2 text-green"></i>Apply Now</a></li>
+                    <li class="mb-2"><a href="contact.html" class="text-decoration-none text-dark"><i
+                                class="fa-solid fa-envelope-open-text me-2 text-green"></i>Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact & Social -->
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                <h6 class="fw-bold text-green mb-3">
+                    <i class="fa-solid fa-address-book me-2 text-green"></i>Contact Us
+                </h6>
+                <p class="mb-1"><i class="fa-solid fa-location-dot me-2 text-green"></i>Thokoza Area-Ulundi Next to
+                    Prince <span>Mangosuthu Airport</span></p>
+                <p class="mb-1"><i class="fa-solid fa-phone me-2 text-green"></i>+27 72 630 1604 - <em>Principal: Mrs
+                        A.F Mfeka (Lady-P)</em></p>
+                <p class="mb-1"><i class="fa-solid fa-envelope me-2 text-green"></i>
+                    <a href="mailto:THENGISANGAYE-PS@kznschools.gov.za"
+                        class="text-decoration-none text-dark">THENGISANGAYE-PS@kznschools.gov.za</a>
+                </p>
+                <div class="mt-3 icon-green">
+                    <a href="https://www.facebook.com/p/Thengisangaye-Public-Primary-School-61564466334294/"
+                        class="me-3 fs-4"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@thengisangaye.pri?_t=ZM-8yjE17lpGGk&_r=1" class="me-3 fs-4"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="me-3 fs-4"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="fs-4"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
 
         <!-- Bootstrap 5 JS Bundle -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
