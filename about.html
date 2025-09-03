@@ -75,7 +75,28 @@
 }
 
 
+.footer-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    justify-content: flex-start;
+}
 
+@media (max-width: 768px) {
+    .footer-logo-wrapper {
+        justify-content: center;
+        /* Center logo on small screens */
+    }
+}
+
+.footer-logo {
+    max-height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.05);
+    /* Subtle zoom on hover */
+}
 
 
 
@@ -228,8 +249,9 @@
             <li data-aos="fade-up" data-aos-delay="50"><b>Deputy Chair:</b> Mrs B.B Zungu</li>
             <li data-aos="fade-up" data-aos-delay="100"><b>Secretary:</b> Mrs S.F Mdlalose</li>
             <li data-aos="fade-up" data-aos-delay="150"><b>Deputy Secretary:</b> Mrs N Magubane</li>
-            <li data-aos="fade-up" data-aos-delay="200"><b>Treasury:</b>
-                Mrs N Sithole; Mr N Ngcobo; Mrs Kunene; Mr Sikhakhane; Mr Ngobese
+            <li data-aos="fade-up" data-aos-delay="200"><b>Treasury:</b> Mrs N.C Sithole</li>
+            <li data-aos="fade-up" data-aos-delay="200"><b>Additional Members:</b> Mrs P.T Kunene; Mr S Sikhakhane</li>
+            <li data-aos="fade-up" data-aos-delay="200"><b>Educator Component:</b> Mr N Ngcobo</li>
             </li>
         </ul>
     
@@ -474,8 +496,8 @@
                                 class="fa-solid fa-house me-2 text-green"></i>Home</a></li>
                     <li class="mb-2"><a href="about.html" class="text-decoration-none text-dark"><i
                                 class="fa-solid fa-users me-2 text-green"></i>About Us</a></li>
-                    <li class="mb-2"><a href="services.html" class="text-decoration-none text-dark"><i
-                                class="fa-solid fa-cogs me-2 text-green"></i>Services</a></li>
+                    <li class="mb-2"><a href="facilities.html" class="text-decoration-none text-dark"><i
+                                class="fa-solid fa-cogs me-2 text-green"></i>Facilities</a></li>
                     <li class="mb-2"><a href="gallery.html" class="text-decoration-none text-dark"><i
                                 class="fa-solid fa-image me-2 text-green"></i>Gallery</a></li>
                     <li class="mb-2"><a href="apply.html" class="text-decoration-none text-dark"><i
