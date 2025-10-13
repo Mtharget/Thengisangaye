@@ -16,129 +16,67 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
 
-<!-- Organogram CSS -->
-<style>
-    .organogram {
-        position: relative;
-    }
+    <style>
+        /* Modern Polished School Website Styles */
 
-    /* Connector lines */
-    .organogram .connector {
-        width: 2px;
-        background: #28a745;
-        margin: 0 auto;
-        opacity: 0;
-        transform: scaleY(0);
-    }
+/* Section background and spacing */
+.teachers-section {
+  background: #f9f9f9;
+}
 
-    .connector.vertical {
-        height: 40px;
-    }
+/* Teacher card container */
+.teacher-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+}
 
-    /* Animate lines */
-    .animate-line {
-        animation: drawLine 1s ease forwards;
-    }
+.teacher-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
 
-    @keyframes drawLine {
-        to {
-            opacity: 1;
-            transform: scaleY(1);
-        }
-    }
+/* Teacher image wrapper */
+.teacher-img-wrapper {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
 
-    /* Cards */
-    .teacher-card {
-        width: 180px;
-        margin: auto;
-        border-radius: 16px;
-        overflow: hidden;
-        transition: all 0.3s ease;
-    }
+.teacher-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
 
-    .teacher-card img {
-        max-height: 160px;
-        object-fit: cover;
-        transition: transform 0.4s ease;
-    }
+.teacher-card:hover .teacher-img {
+  transform: scale(1.08);
+}
 
-    .teacher-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
+/* Info area */
+.teacher-info {
+  padding: 18px 15px;
+}
 
-    .teacher-card:hover img {
-        transform: scale(1.05);
-    }
+.teacher-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 5px;
+}
 
-    /* Fade-in animation for cards */
-    .animate-card {
-        opacity: 0;
-        transform: translateY(30px);
-        animation: fadeUp 0.8s ease forwards;
-    }
+.teacher-grade {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0;
+}
 
-    @keyframes fadeUp {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
 
-    /* Staggered animation for HODs */
-    .animate-hods>.hod {
-        opacity: 0;
-        transform: translateY(30px);
-        animation: fadeUp 0.8s ease forwards;
-    }
 
-    .animate-hods>.hod:nth-child(1) {
-        animation-delay: 0.4s;
-    }
-
-    .animate-hods>.hod:nth-child(2) {
-        animation-delay: 0.6s;
-    }
-
-    /* Horizontal connector between HODs */
-    .hods {
-        position: relative;
-        margin-top: 20px;
-    }
-
-    .hods::before {
-        content: "";
-        position: absolute;
-        top: -20px;
-        left: 15%;
-        right: 15%;
-        height: 2px;
-        background: #28a745;
-        opacity: 0;
-        transform: scaleX(0);
-        animation: drawHorizontal 1s ease 0.8s forwards;
-    }
-
-    @keyframes drawHorizontal {
-        to {
-            opacity: 1;
-            transform: scaleX(1);
-        }
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-        .hods {
-            flex-direction: column;
-            gap: 40px;
-        }
-
-        .hods::before {
-            display: none;
-        }
-    }
-</style>
-
+    </style>
 </head>
 
 <body>
@@ -180,7 +118,7 @@
     <!-- Animated Hero Image Section -->
 <section class="hero-image-section d-flex align-items-center justify-content-center"
     style="min-height: 360px; position: relative; overflow: hidden;margin-top: -150px;">
-        <img src="./images/Garden/Gardening2.jpg"
+        <img src="./images/Learners/Learnerrs.jpg"
             alt="School Hero" class="hero-img" data-aos="zoom-in" />
         <div class="hero-overlay"></div>
         <div class="hero-text text-center w-100" data-aos="fade-down">
@@ -324,17 +262,15 @@
     </div>
 </section>
 
-
-<!-- Teachers Organogram Section -->
+<!-- Teachers Section -->
 <section class="teachers-section mt-5" data-aos="fade-up">
     <h2 class="section-title text-green text-center mb-5" data-aos="zoom-in">Meet Our Teachers</h2>
-
-    <div class="organogram text-center">
+    <div class="row g-4 justify-content-center">
 
         <!-- Principal -->
-        <div class="principal">
-            <div class="card shadow-lg border-0 text-center teacher-card mx-auto">
-                <img src="./Teachers/Mrs A.F Mfeka - Lady Principal.JPG" alt="Mrs A.F Mfeka">
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="250">
+            <div class="card shadow-lg border-0 text-center h-100 teacher-card">
+                <img src="./Teachers/Mrs A.F Mfeka - Principal.jpg" class="card-img-top rounded-top" alt="Mrs A.F Mfeka">
                 <div class="card-body">
                     <h5 class="card-title mb-1">Mrs A.F Mfeka</h5>
                     <p class="card-text text-muted">Principal</p>
@@ -342,165 +278,184 @@
             </div>
         </div>
 
-        <!-- Connector Line -->
-        <div class="connector vertical"></div>
-
-        <!-- HODs Row -->
-        <div class="hods d-flex justify-content-center gap-5">
-
-            <!-- Foundation Phase HOD -->
-            <div class="hod text-center">
-                <div class="card shadow-lg border-0 teacher-card">
-                    <img src="./Teachers/Mrs O.M Mtshali - Departmental Head (Foundation Phase).JPG"
-                        alt="Mrs O.M Mtshali">
-                    <div class="card-body">
-                        <h5 class="card-title mb-1">Mrs O.M Mtshali</h5>
-                        <p class="card-text text-muted">HOD (Foundation Phase)</p>
-                    </div>
-                </div>
-
-                <!-- Connector -->
-                <div class="connector vertical"></div>
-
-                <!-- Teachers under Foundation -->
-                <div class="teachers d-flex justify-content-center flex-wrap gap-3">
-                    <!-- Grade 1 -->
-                    <div class="card teacher-card">
-                        <img src="./Teachers/Mrs M.S Sikhakhane - Foundation Phase.JPG" alt="Mrs M.S Sikhakhane">
-                        <div class="card-body">
-                            <h5 class="card-title mb-1">Mrs M.S Sikhakhane</h5>
-                            <p class="card-text text-muted">Grade 1 Teacher</p>
-                        </div>
-                    </div>
-
-                    <!-- Grade 2 -->
-                    <div class="card teacher-card">
-                        <img src="./Teachers/Mrs N Magubane - Foundation Phase.JPG" alt="Mrs N Magubane">
-                        <div class="card-body">
-                            <h5 class="card-title mb-1">Mrs N Magubane</h5>
-                            <p class="card-text text-muted">Grade 2 Teacher</p>
-                        </div>
-                    </div>
-
-                    <div class="card teacher-card">
-                        <img src="./Teachers/Mrs N Mvubu - Foundation Phase1.JPG" alt="Mrs N Mvubu">
-                        <div class="card-body">
-                            <h5 class="card-title mb-1">Mrs N Mvubu</h5>
-                            <p class="card-text text-muted">Grade 2 Teacher</p>
-                        </div>
-                    </div>
-
-                    <!-- Grade 3 -->
-                    <div class="card teacher-card">
-                        <img src="./Teachers/Mrs T.M Mzila - Foundation Phase.JPG" alt="Mrs T.M Mzila">
-                        <div class="card-body">
-                            <h5 class="card-title mb-1">Mrs T.M Mzila</h5>
-                            <p class="card-text text-muted">Grade 3 Teacher</p>
-                        </div>
-                    </div>
-
-                    <div class="card teacher-card">
-                        <img src="./Teachers/Mrs S.F Mdlalose - Foundation Phase1.JPG" alt="Mrs S.F Mdlalose">
-                        <div class="card-body">
-                            <h5 class="card-title mb-1">Mrs S.F Mdlalose</h5>
-                            <p class="card-text text-muted">Grade 3 Teacher</p>
-                        </div>
-                    </div>
+          <!-- Deputy Principal -->
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="250">
+            <div class="card shadow-lg border-0 text-center h-100 teacher-card">
+                <img src="./Teachers/Mr ZD Zulu - Deputy Principal.jpg" class="card-img-top rounded-top" alt="Mrs A.F Mfeka">
+                <div class="card-body">
+                    <h5 class="card-title mb-1">Mr ZD Zulu</h5>
+                    <p class="card-text text-muted">Deputy Principal</p>
                 </div>
             </div>
+        </div>
 
-            <!-- Intermediate & Senior Phase HOD -->
-            <div class="hod text-center">
-                <div class="card shadow-lg border-0 teacher-card">
-                    <img src="./Teachers/Ms B.N.G Mtshali - Departmental Head - (Intermediate & Senior Phase).JPG"
-                        alt="Ms B.N.G Mtshali">
-                    <div class="card-body">
-                        <h5 class="card-title mb-1">Ms B.N.G Mtshali</h5>
-                        <p class="card-text text-muted">HOD (Intermediate & Senior Phase)</p>
-                    </div>
+          <!-- Department Head Found Phase -->
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="650">
+            <div class="card shadow-lg border-0 text-center h-100 teacher-card">
+                <img src="./Teachers/Mrs O.M Mtshali - Departmental Head (Foundation Phase).JPG" class="card-img-top rounded-top" alt="Mrs O.M Mtshali">
+                <div class="card-body">
+                    <h5 class="card-title mb-1">Mrs O.M Mtshali</h5>
+                    <p class="card-text text-muted">Head of Department (Foundation Phase)</p>
                 </div>
+            </div>
+        </div>
 
-                <!-- Connector -->
-                <div class="connector vertical"></div>
+        <!-- Grade 1 -->
+       <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-delay="350">
+            <div class="card shadow-lg border-0 text-center h-100 teacher-card">
+                <img src="./Teachers/Mrs M.S Sikhakhane - Foundation Phase.JPG" class="card-img-top rounded-top" alt="Mrs N Mvubu">
+                <div class="card-body">
+                    <h5 class="card-title mb-1">Mrs M.S Sikhakhane</h5>
+                    <p class="card-text text-muted">Grade 1 Teacher</p>
+                </div>
+            </div>
+        </div>
 
-                <!-- Teachers under Intermediate -->
-                <div class="teachers d-flex justify-content-center flex-wrap gap-3">
-                    <!-- Grade 4 -->
-                    <div class="card teacher-card">
-                        <img src="./Teachers/Mrs B.P Mbatha - Intermediate Phase.JPG" alt="Mrs B.P Mbatha">
-                        <div class="card-body">
-                            <h5 class="card-title mb-1">Mrs B.P Mbatha</h5>
-                            <p class="card-text text-muted">Grade 4 Teacher</p>
-                        </div>
-                    </div>
+                <!-- Grade 2 -->
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="card shadow-lg border-0 text-center h-100 teacher-card">
+                <img src="./Teachers/Mrs N Magubane - Foundation Phase.JPG" class="card-img-top rounded-top" alt="Mrs N Magubane">
+                <div class="card-body">
+                    <h5 class="card-title mb-1">Mrs N Magubane</h5>
+                    <p class="card-text text-muted">Grade 2 Teacher</p>
+                </div>
+            </div>
+        </div>
 
-                    <div class="card teacher-card">
-                        <img src="./Teachers/Mrs N.D Zungu - Intermediate Phase.JPG" alt="Mrs N.D Zungu">
-                        <div class="card-body">
-                            <h5 class="card-title mb-1">Mrs N.D Zungu</h5>
-                            <p class="card-text text-muted">Grade 4 Teacher</p>
-                        </div>
-                    </div>
+        <!-- Grade 2 -->
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="450">
+            <div class="card shadow-lg border-0 text-center h-100 teacher-card">
+                <img src="./Teachers/Mrs N Mvubu - Foundation Phase1.JPG " class="card-img-top rounded-top" alt="Mrs N Mvubu">
+                <div class="card-body">
+                    <h5 class="card-title mb-1">Mrs N Mvubu</h5>
+                    <p class="card-text text-muted">Grade 2 Teacher</p>
+                </div>
+            </div>
+        </div>
 
-                    <!-- Grade 5 -->
-                    <div class="card teacher-card">
-                        <img src="./Teachers/Mrs N.O Mthembu - Intermediate Phase.JPG" alt="Mrs N.O Mthembu">
-                        <div class="card-body">
-                            <h5 class="card-title mb-1">Mrs N.O Mthembu</h5>
-                            <p class="card-text text-muted">Grade 5 Teacher</p>
-                        </div>
-                    </div>
+        <!-- Grade 3 -->
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="850">
+            <div class="card shadow-lg border-0 text-center h-100 teacher-card">
+                <img src="./Teachers/Mrs T.M Mzila - Foundation Phase.JPG " class="card-img-top rounded-top" alt="Mrs T.M Mzila">
+                <div class="card-body">
+                    <h5 class="card-title mb-1">Mrs T.M Mzila</h5>
+                    <p class="card-text text-muted">Grade 3 Teacher</p>
+                </div>
+            </div>
+        </div>
 
-                    <div class="card teacher-card">
-                        <img src="./Teachers/Mr S.C Masondo - Intermediate Phase.JPG" alt="Mr S.C Masondo">
-                        <div class="card-body">
-                            <h5 class="card-title mb-1">Mr S.C Masondo</h5>
-                            <p class="card-text text-muted">Grade 5 Teacher</p>
-                        </div>
-                    </div>
 
-                    <!-- Grade 6 -->
-                    <div class="card teacher-card">
-                        <img src="./Teachers/Mrs S.A Ngema - Intermediate Phase2.JPG" alt="Mrs S.A Ngema">
-                        <div class="card-body">
-                            <h5 class="card-title mb-1">Mrs S.A Ngema</h5>
-                            <p class="card-text text-muted">Grade 6 Teacher</p>
-                        </div>
-                    </div>
+        <!-- Grade 3 -->
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-delay="750">
+            <div class="card shadow-lg border-0 text-center h-100 teacher-card">
+                <img src="./Teachers/Mrs S.F Mdlalose - Foundation Phase1.JPG " class="card-img-top rounded-top" alt="Mrs S.F Mdlalose">
+                <div class="card-body">
+                    <h5 class="card-title mb-1">Mrs S.F Mdlalose</h5>
+                    <p class="card-text text-muted">Grade 3 Teacher</p>
+                </div>
+            </div>
+        </div>
 
-                    <div class="card teacher-card">
-                        <img src="./Teachers/Mrs N.E Mfeka - Intermediate Phase.jpg" alt="Mrs N.E Mfeka">
-                        <div class="card-body">
-                            <h5 class="card-title mb-1">Mrs N.E Mfeka</h5>
-                            <p class="card-text text-muted">Grade 6 Teacher</p>
-                        </div>
-                    </div>
+            <!-- Department Head Intermediate and Senior Phase  -->
+            <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="900">
+            <div class="card shadow-lg border-0 text-center h-100 teacher-card">
+                <img src="./Teachers/Ms B.N.G Mtshali - Departmental Head - (Intermediate & Senior Phase).JPG " class="card-img-top rounded-top" alt="Ms B.N.G Mtshali">
+                <div class="card-body">
+                    <h5 class="card-title mb-1">Ms B.N.G Mtshali</h5>
+                    <p class="card-text text-muted">Head of Department (Intermediate & Senior Phase)</p>
+                </div>
+            </div>
+        </div>
 
-                    <!-- Grade 7 -->
-                    <div class="card teacher-card">
-                        <img src="./Teachers/Mr N Ngcobo - Senior Phase.JPG" alt="Mr N Ngcobo">
-                        <div class="card-body">
-                            <h5 class="card-title mb-1">Mr N Ngcobo</h5>
-                            <p class="card-text text-muted">Grade 7 Teacher</p>
-                        </div>
-                    </div>
+        <!-- Grade 4 -->
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="card shadow-lg border-0 text-center h-100 teacher-card">
+                <img src="./Teachers/Mrs B.P Mbatha - Intermediate Phase.JPG " class="card-img-top rounded-top" alt="Mrs B.P Mbatha">
+                <div class="card-body">
+                    <h5 class="card-title mb-1">Mrs B.P Mbatha</h5>
+                    <p class="card-text text-muted">Grade 4 Teacher</p>
+                </div>
+            </div>
+        </div>
+
+                <!-- Grade 4 -->
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="500">
+            <div class="card shadow-lg border-0 text-center h-100 teacher-card">
+                <img src="./Teachers/Mrs N.D Zungu - Intermediate Phase.JPG" class="card-img-top rounded-top" alt="Mrs N.D Zungu">
+                <div class="card-body">
+                    <h5 class="card-title mb-1">Mrs N.D Zungu</h5>
+                    <p class="card-text text-muted">Grade 4 Teacher</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grade 5 -->
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="600">
+            <div class="card shadow-lg border-0 text-center h-100 teacher-card">
+                <img src="./Teachers/Mrs N.O Mthembu - Intermediate Phase.JPG" class="card-img-top rounded-top" alt="Mrs N.O Mthembu">
+                <div class="card-body">
+                    <h5 class="card-title mb-1">Mrs N.O Mthembu</h5>
+                    <p class="card-text text-muted">Grade 5 Teacher</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grade 5 -->
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="card shadow-lg border-0 text-center h-100 teacher-card">
+                <img src="./Teachers/Mr S.C Masondo - Intermediate Phase.JPG" class="card-img-top rounded-top" alt="Mr S.C Masondo">
+                <div class="card-body">
+                    <h5 class="card-title mb-1">Mr S.C Masondo</h5>
+                    <p class="card-text text-muted">Grade 5 Teacher</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grade 6 -->
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="700">
+            <div class="card shadow-lg border-0 text-center h-100 teacher-card">
+                <img src="./Teachers/Mrs S.A Ngema - Intermediate Phase2.JPG " class="card-img-top rounded-top" alt="Mrs S.A Ngema">
+                <div class="card-body">
+                    <h5 class="card-title mb-1">Mrs S.A Ngema</h5>
+                    <p class="card-text text-muted">Grade 6 Teacher</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grade6 -->
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-delay="550">
+            <div class="card shadow-lg border-0 text-center h-100 teacher-card">
+                <img src="./Teachers/Mrs N.E Mfeka - Intermediate Phase.jpg " class="card-img-top rounded-top" alt="Mrs N.E Mfeka">
+                <div class="card-body">
+                    <h5 class="card-title mb-1">Mrs N.E Mfeka</h5>
+                    <p class="card-text text-muted">Grade 6 Teacher</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grade7 -->
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="flip-left" data-aos-delay="150">
+            <div class="card shadow-lg border-0 text-center h-100 teacher-card">
+                <img src="./Teachers/Mr N Ngcobo - Senior Phase.JPG" class="card-img-top rounded-top" alt="Mr N Ngcobo">
+                <div class="card-body">
+                    <h5 class="card-title mb-1">Mr N Ngcobo</h5>
+                    <p class="card-text text-muted">Grade 7 Teacher</p>
                 </div>
             </div>
         </div>
 
         <!-- SGB Chairperson -->
-        <div class="mt-5">
-            <div class="card shadow-lg border-0 text-center teacher-card mx-auto">
-                <img src="./Teachers/Mr M.T Mbatha - SGB Chairperson.JPG" alt="Mr M.T Mbatha">
+        <div class="col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card shadow-lg border-0 text-center h-100 teacher-card">
+                <img src="./Teachers/Mr M.T Mbatha - SGB Chairperson.JPG" class="card-img-top rounded-top" alt="Mr M.T Mbatha">
                 <div class="card-body">
                     <h5 class="card-title mb-1">Mr M.T Mbatha</h5>
                     <p class="card-text text-muted">SGB Chairperson</p>
                 </div>
             </div>
-        </div>
-
     </div>
 </section>
+
 
     </main>
 <!-- Footer -->
@@ -561,7 +516,7 @@
                     <a href="https://www.facebook.com/p/Thengisangaye-Public-Primary-School-61564466334294/"
                         class="me-3 fs-4"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://www.tiktok.com/@thengisangaye.pri?_t=ZM-8yjE17lpGGk&_r=1" class="me-3 fs-4"><i
-                            class="fa-brands fa-tiktok"></i></a>
+                            class="fa-brands fa-twitter"></i></a>
                     <a href="#" class="me-3 fs-4"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#" class="fs-4"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
